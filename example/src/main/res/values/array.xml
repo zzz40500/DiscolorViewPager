@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="colors">
+        <item>@color/md_amber_500</item>
+        <item>@color/md_indigo_500</item>
+        <item>@color/md_pink_500</item>
+        <item>@color/md_red_500</item>
+        <item>@color/md_blue_500</item>
+    </array>
+</resources>

@@ -1,0 +1,32 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    android:id="@+id/rootView"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+
+    <com.mingle.discolor.PagerSlidingTabStrip
+        android:id="@+id/tabStrip"
+        android:layout_marginTop="1dp"
+        app:pstsIndicatorColor="@color/md_orange_600"
+        app:pstsUnderlineColor="@color/md_orange_600"
+        app:pstsShouldExpand="true"
+        app:pstsSelectTitleColor="@color/md_white_1000"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/tabStrip"
+        android:layout_width="fill_parent"
+        android:background="@color/md_white_1000"
+        android:layout_marginBottom="2dp"
+        android:layout_height="fill_parent"
+        />
+
+</RelativeLayout>
