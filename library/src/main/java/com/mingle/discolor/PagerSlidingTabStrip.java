@@ -531,24 +531,24 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             }
 
 
-            if(colors!=null){
+
                 switch (direction){
                     case SCROLL_DIRECTION_LEFT:
-
-                        if (position != pager.getAdapter().getCount()-1){
+                        if (colors!=null && position != pager.getAdapter().getCount()-1){
 
                             int color=    ColorTranslation.translation(colors[position],colors[position+1],positionOffset);
 
                             setBackgroundColor(color);
 
-                            View tv1 = tabsContainer.getChildAt(position);
-                            if (tv1 instanceof TextView) {
-                                ((TextView) tv1).setTextColor( ColorTranslation.translation(selectTitleColor,tabTextColor,positionOffset));
-                            }
-                            View tv2 = tabsContainer.getChildAt(position+1);
-                            if (tv2 instanceof TextView) {
-                                ((TextView) tv2).setTextColor( ColorTranslation.translation(tabTextColor,selectTitleColor,positionOffset));
-                            }
+
+                        }
+                        View tv1 = tabsContainer.getChildAt(position);
+                        if (tv1 instanceof TextView) {
+                            ((TextView) tv1).setTextColor( ColorTranslation.translation(selectTitleColor,tabTextColor,positionOffset));
+                        }
+                        View tv2 = tabsContainer.getChildAt(position+1);
+                        if (tv2 instanceof TextView) {
+                            ((TextView) tv2).setTextColor( ColorTranslation.translation(tabTextColor,selectTitleColor,positionOffset));
                         }
 //
 
@@ -556,18 +556,19 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                     case SCROLL_DIRECTION_RIGHT:
 
 
-                        if (position != pager.getAdapter().getCount()-1){
+                        if (colors!=null && position != pager.getAdapter().getCount()-1){
 
                             int color=    ColorTranslation.translation(colors[position],colors[position+1],positionOffset);
                             setBackgroundColor(color);
-                            View tv1 = tabsContainer.getChildAt(position);
-                            if (tv1 instanceof TextView) {
-                                ((TextView) tv1).setTextColor( ColorTranslation.translation(selectTitleColor,tabTextColor,positionOffset));
-                            }
-                            View tv2 = tabsContainer.getChildAt(position+1);
-                            if (tv2 instanceof TextView) {
-                                ((TextView) tv2).setTextColor( ColorTranslation.translation(tabTextColor,selectTitleColor,positionOffset));
-                            }
+
+                        }
+                        View tv11 = tabsContainer.getChildAt(position);
+                        if (tv11 instanceof TextView) {
+                            ((TextView) tv11).setTextColor( ColorTranslation.translation(selectTitleColor,tabTextColor,positionOffset));
+                        }
+                        View tv22 = tabsContainer.getChildAt(position+1);
+                        if (tv22 instanceof TextView) {
+                            ((TextView) tv22).setTextColor( ColorTranslation.translation(tabTextColor,selectTitleColor,positionOffset));
                         }
 
                         break;
@@ -579,7 +580,6 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                 }
 
 
-            }
 
 
             invalidate();

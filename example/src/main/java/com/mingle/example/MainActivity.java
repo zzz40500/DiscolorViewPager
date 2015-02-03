@@ -51,16 +51,22 @@ public class MainActivity extends ActionBarActivity {
 
 
         ViewpagerAdapter viewpagerAdapter=new ViewpagerAdapter(getSupportFragmentManager(),fragments,titles);
+
+        //ViewPager 设置适配器
         vps.setAdapter(viewpagerAdapter);
 
+        //pagerSlidingTabStrip  设置 ViewPager
         pagerSlidingTabStrip.setViewPager(vps);
+        //注册观察者,观察 pagerSlidingTabStrip 背景颜色的变换
         pagerSlidingTabStrip.setBackgroundColorObserve(new PagerSlidingTabStrip.BackgroundColorObserve() {
             @Override
             public void change(int color) {
+                //将屏幕设置跟pagerSlidingTabStrip 同色
                 rootView.setBackgroundColor(color);
                 getSupportActionBar().setBackgroundDrawable(new ColorDrawable(color));
             }
         });
+        //设置pagerSlidingTabStrip  每个 tab 的背景颜色
         pagerSlidingTabStrip.setColors(getResources().getIntArray(R.array.colors));
 
     }
