@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
 
 
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zzz40500/HeadsUp"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zzz40500/DiscolorViewPager"));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             MainActivity.this.startActivity(intent);
 
